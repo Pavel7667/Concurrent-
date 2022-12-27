@@ -5,7 +5,7 @@ import java.util.stream.IntStream;
 public class SumOfNumberUsingRunnableWithLambda {
 
     public static int[] numbers = IntStream.rangeClosed(0, 5000).toArray();
-    public static int sum = 0;
+    public static volatile int sum = 0;
     public static int total = IntStream.rangeClosed(0, 5000).sum();
 
     public static void main(String[] args) throws InterruptedException {
@@ -36,7 +36,7 @@ public class SumOfNumberUsingRunnableWithLambda {
      *
      * @param toAdd some int to SUM
      */
-    public synchronized static void add(int toAdd) {
+    public  static void add(int toAdd) {
         sum = sum + toAdd;
     }
 }
