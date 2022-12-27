@@ -48,7 +48,7 @@ class Worker1Parallel implements Runnable {
         for (int i = 0; i < array.length / 2; i++) {
             sum = sum + array[i];
         }
-        SumOfNumberUsingRunnableExample.add(sum);
+        SumOfNumberUsingRunnableExample.add(sum); // calling once
     }
 
 }
@@ -66,7 +66,7 @@ class Worker2Parallel implements Runnable {
         for (int i = array.length / 2; i < array.length; i++) {
             sum = sum + array[i];
         }
-        SumOfNumberUsingRunnableExample.add(sum);
+        SumOfNumberUsingRunnableExample.add(sum);  // calling once
     }
 }
 
